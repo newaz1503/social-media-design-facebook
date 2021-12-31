@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Page | Facebook</title>
+    <!--font-awesome css-->
+    <link rel="stylesheet" href="./css/all.css">
+    <!--custom css-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!--============Navigation menu==========-->
+<header class="header">
+    <nav>
+        <div class="nav-left">
+            <a href="index.html"><img src="./images/facebook-logo.png" alt="Facebook Logo" class="logo"></a>
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><i class="fas fa-tv header-icon tv-icon"></i></li>
+                <li><i class="fab fa-facebook-messenger header-icon"></i></li>
+                <li class="notification">
+                    <i class="fas fa-bell header-icon"></i>
+                    <span>2</span>
+                </li>
+            </ul>
+            <div class="user-profile online" onclick="menuToggle()">
+                <img src="./images/user-profie.jpg" alt="User Profile" class="user">
+            </div>
+        </div>
+        <!--profile dropdown menu-->
+        <div class="profile-settings">
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-inner">
+                <div class="profile-title mb-3">
+                    <a href="#">
+                        <img src="./images/user-profie.jpg" alt="profile image">
+                        <div class="name">
+                            <h3>Newaz Sharif</h3>
+                            <p>See your profile</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feedback-box mb-3">
+                    <a href="#">
+                        <div class="round-icon">
+                            <i class="fas fa-exclamation-triangle dark-icon"></i>
+                        </div>
+                        <div class="feedback-content">
+                            <h3>Give Feedback</h3>
+                            <p>Help us improving the new facebook</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="switch-account mb-3">
+                    <a href="#">
+                        <img src="./images/chat-2.jpg" alt="another account">
+                        <div class="switch-content">
+                            <h3>Switch Account</h3>
+                            <p>Log in as John Doe</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="setting-privacy mb-3">
+                    <a href="#">
+                        <div class="round-icon">
+                            <i class="fas fa-cog dark-icon"></i>
+                        </div>
+                        <div class="privacy-content">
+                            <h3>Settings & Privacy</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="help mb-3">
+                    <a href="#">
+                        <div class="round-icon">
+                            <i class="fas fa-question-circle dark-icon"></i>
+                        </div>
+                        <div class="help-content">
+                            <h3>Help & Support</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="logout mb-3">
+                    <a href="#">
+                        <div class="round-icon">
+                            <i class="fas fa-sign-out-alt dark-icon"></i>
+                        </div>
+                        <div class="logout-content">
+                            <h3>Logout</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--============Navigation menu End==========-->
+
+<!-------------Profile page------------>
+<div class="profile-header">
+    <div class="profile-container">
+        <!--cover photo-->
+        <div class="profile-cover-img">
+            <img src="./images/cover-photo.jpeg" alt="cover-img">
+            <div class="edit-cover-img">
+                <label class="custom-file-upload">
+                    <input type="file"/>
+                    <i class="fas fa-camera"></i> Edit Cover Photo
+                </label>
+            </div>
+        </div>
+        <!--profile info-->
+        <div class="profile-content-box">
+            <div class="profile-info">
+                <div class="profile-info-left">
+                    <div class="profile-img">
+                        <img src="./images/user-profie.jpg" alt="profile-img">
+                        <div class="profile-after">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="profile-details">
+                        <h1 class="profile-name">Newaz Sharif</h1>
+                        <p><a href="#" class="total-friend">500 Friends</a></p>
+                        <div class="friend-list">
+                            <a href="#"><img src="./images/chat-1.jpg" alt="Friend"></a>
+                            <a href="#"><img src="./images/chat-2.jpg" alt="Friend"></a>
+                            <a href="#"><img src="./images/chat-3.jpg" alt="Friend"></a>
+                            <a href="#"><img src="./images/chat-4.jpg" alt="Friend"></a>
+                            <a href="#"><img src="./images/chat-5.jpg" alt="Friend"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info-right">
+                    <div class="story-btn">
+                        <a href="#">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>Add to Story</span>
+                        </a>
+                    </div>
+                    <div class="edit-profile-btn">
+                        <a href="#">
+                            <i class="fas fa-pencil-alt"></i>
+                            <span>Edit Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--link row-->
+        <div class="imp-link-row">
+            <div class="link-box">
+                <div class="link-1 active"><a href="#">Posts</a></div>
+                <div class="link-2"><a href="#">About</a></div>
+                <div class="link-3"><a href="#">Friends</a></div>
+                <div class="link-4"><a href="#">Photos</a></div>
+                <div class="link-5"><a href="#">Story Archive</a></div>
+                <div class="link-6"><a href="#">Videos</a></div>
+                <div class="link-7"><a href="#">More</a></div>
+            </div>
+           <div class="more-box">
+               <i class="fas fa-ellipsis-h"></i>
+           </div>
+        </div>
+    </div>
+</div>
+<!--person info-->
+<div class="profile-container">
+    <div class="personal-box">
+        <!--profile info-->
+        <div class="info-col">
+            <div class="info-area">
+                <h2 class="info-title">Intro</h2>
+                <!--bio-->
+                <div class="bio-box">
+                    <p>Blood: B+</p>
+                    <a href="#" class="edit-bio">Edit Bio</a>
+                </div>
+                <!--person education-->
+                <div class="edu-info-box">
+                    <div class="info">
+                        <i class="fas fa-briefcase edu-icon"></i>
+                        <span>CSE at <a href="#">GUB</a></span>
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-graduation-cap edu-icon"></i>
+                        <span>Studied at <a href="#">Rajshahi Govt. city college</a></span>
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-graduation-cap edu-icon"></i>
+                        <span>Went to <a href="#">Singra Damdama pilot school & college</a></span>
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-home edu-icon"></i>
+                        <span>Lives in <a href="#">Dhaka, Bangladesh</a></span>
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-map-marker-alt edu-icon"></i>
+                        <span>From <a href="#">Natore</a></span>
+                    </div>
+                </div>
+                <!--others-->
+                <div class="others-info">
+                    <div><a href="#" class="edit-details">Edit Details</a></div>
+                    <div><a href="#" class="edit-hobbies">Add Hobbies</a></div>
+                    <div><a href="#" class="edit-feature">Add Featured</a></div>
+                </div>
+            </div>
+            <!--profile uploaded image-->
+            <div class="uploaded-img">
+                <div class="profile-img-title">
+                    <a href="#"><h3>Photos</h3></a>
+                    <a href="#">See All</a>
+                </div>
+                <div class="img-box">
+                    <a href="#"><img src="./images/chat-1.jpg"></a>
+                    <a href="#"><img src="./images/chat-2.jpg"></a>
+                    <a href="#"><img src="./images/chat-3.jpg"></a>
+                    <a href="#"><img src="./images/chat-4.jpg"></a>
+                    <a href="#"><img src="./images/chat-5.jpg"></a>
+                    <a href="#"><img src="./images/chat-6.jpg"></a>
+                    <a href="#"><img src="./images/story-1.jpg"></a>
+                    <a href="#"><img src="./images/story-2.jpg"></a>
+                    <a href="#"><img src="./images/story-3.jpeg"></a>
+                </div>
+            </div>
+
+            <!--Friends-->
+            <div class="friends">
+                <div class="friends-title">
+                    <a href="#"><h3>Friends</h3></a>
+                    <a href="#">See All friends</a>
+                </div>
+                <p class="friends-count">500 Friends</p>
+                <div class="friend-list">
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/chat-1.jpg">
+                            <h5><a href="#" class="name">Selena Mae</a></h5>
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/chat-2.jpg">
+                            <h5><a href="#" class="name">Raju Ahmed</a></h5>
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/chat-3.jpg">
+                            <h5><a href="#" class="name">John Doe</a></h5>
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/chat-4.jpg">
+                            <h5><a href="#" class="name">Mark Wood</a></h5>
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/chat-5.jpg">
+                            <h5><a href="#" class="name">Broad</a></h5>
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/chat-6.jpg">
+                            <h5><a href="#" class="name">Justin Max</a></h5>
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/story-1.jpg">
+                            <h5><a href="#" class="name">Anderson</a></h5>
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/story-2.jpg">
+                            <h5><a href="#" class="name">Jemmy Nisam</a></h5>
+                        </a>
+                     </div>
+                    <div class="friend">
+                        <a href="#">
+                            <img src="./images/story-3.jpeg">
+                            <h5><a href="#" class="name">kerry Lom</a></h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--copyright-->
+            <div class="copyright">
+                <p>Copyright &copy; 2021 - Designed by <a href="https://web.facebook.com/mdNewazsharifsaikot/" target="_blank">Newaz Sharif</a></p>
+            </div>
+        </div>
+
+        <!--profile post-->
+        <div class="post-col">
+            <!--Create post section-->
+            <div class="create-post-box">
+                <div class="user-profile">
+                    <img src="./images/user-profie.jpg" alt="User Profile">
+                    <div class="input-box">
+                        <textarea rows="3" placeholder="What's on your mind, Newaz Sharif?"></textarea>
+                    </div>
+                </div>
+                <div class="others-link">
+                    <a href="#"><i class="fas fa-video video-icon"></i>Live Video</a>
+                    <a href="#"><i class="fas fa-images photo-icon"></i>Photo/Video</a>
+                    <a href="#"><i class="far fa-smile smile-icon"></i>Feeling Activity</a>
+                </div>
+            </div>
+            <!--post section-->
+            <div class="post-container">
+                <!--post-1-->
+                <div class="post-box">
+                    <div><i class="fas fa-ellipsis-h"></i></div>
+                    <div class="post-user-profile">
+                        <img src="./images/chat-3.jpg" alt="User Img">
+                        <div class="user-info">
+                            <a href="#" class="name">Raju Ahmed</a>
+                            <a href="#">20 July, 2021 at 16:30 pm</a>
+                            <small title="Public"><i class="fas fa-globe-asia"></i></small>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-desc">
+                            <p class="post-text">I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. </p>
+                        </div>
+                        <div class="post-img">
+                            <img src="./images/post-1.jpg" alt="Post Image">
+                        </div>
+                        <div class="like-comment-count">
+                            <div class="all-reacts">
+                                <div><a href="#"><i class="fas fa-thumbs-up"></i></a></div>
+                                <div><a href="#"><i class="fas fa-heart"></i></a></div>
+                                <div><a href="#"><i class="fas fa-sad-tear"></i></a></div>
+                                <p>John Doe and 5 others</p>
+                            </div>
+                            <div class="comment-count">
+                                <p>5 Comments</p>
+                            </div>
+                        </div>
+                        <div class="like-comment-share">
+                            <div><a href="#"><i class="far fa-thumbs-up imp-icon"></i>Like</a></div>
+                            <div><a href="#"><i class="far fa-comment imp-icon"></i>Comment</a></div>
+                            <div><a href="#"><i class="fas fa-share imp-icon"></i>Share</a></div>
+                        </div>
+                        <!--comment area-->
+                        <div class="comment-box">
+                            <div class="comment-count">
+                                <a href="#">View 1 more comment</a>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-4.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Alex Smith</a>
+                                        <p class="comment">Hello, this is me.</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">1 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-comment-box">
+                                <div class="online">
+                                    <img src="./images/user-profie.jpg" alt="User Profile">
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Write a Comment...">
+                                    <div class="input-rel">
+                                        <a href="#"><i class="far fa-smile"></i></a>
+                                        <a href="#"><i class="fas fa-camera"></i></a>
+                                        <a href="#"><i class="far fa-images"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-box">
+                    <div><i class="fas fa-ellipsis-h"></i></div>
+                    <div class="post-user-profile">
+                        <img src="./images/chat-2.jpg" alt="User Img">
+                        <div class="user-info">
+                            <a href="#" class="name">John Doe</a>
+                            <a href="#">22 July, 2021 at 20:50 pm</a>
+                            <small title="Friends"><i class="fas fa-user-friends"></i></small>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-desc">
+                            <p class="post-text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. </p>
+                        </div>
+                        <div class="post-img">
+                            <img src="./images/post-2.jpg" alt="Post Image">
+                        </div>
+                        <div class="like-comment-count">
+                            <div class="all-reacts">
+                                <div><a href="#"><i class="fas fa-thumbs-up"></i></a></div>
+                                <div><a href="#"><i class="fas fa-heart"></i></a></div>
+                                <div><a href="#"><i class="fas fa-sad-tear"></i></a></div>
+                                <p>John Doe and 5 others</p>
+                            </div>
+                            <div class="comment-count">
+                                <p>5 Comments</p>
+                            </div>
+                        </div>
+                        <div class="like-comment-share">
+                            <div><a href="#"><i class="far fa-thumbs-up imp-icon"></i>Like</a></div>
+                            <div><a href="#"><i class="far fa-comment imp-icon"></i>Comment</a></div>
+                            <div><a href="#"><i class="fas fa-share imp-icon"></i>Share</a></div>
+                        </div>
+                        <!--comment area-->
+                        <div class="comment-box">
+                            <div class="comment-count">
+                                <a href="#">View 3 more comment</a>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-3.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Alex Smith</a>
+                                        <p class="comment">Hello, this is me.</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">1 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-4.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Helena</a>
+                                        <p class="comment">Hi there</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">35 m</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-comment-box">
+                                <div class="online">
+                                    <img src="./images/user-profie.jpg" alt="User Profile">
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Write a Comment...">
+                                    <div class="input-rel">
+                                        <a href="#"><i class="far fa-smile"></i></a>
+                                        <a href="#"><i class="fas fa-camera"></i></a>
+                                        <a href="#"><i class="far fa-images"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-box">
+                    <div><i class="fas fa-ellipsis-h"></i></div>
+                    <div class="post-user-profile">
+                        <img src="./images/chat-3.jpg" alt="User Img">
+                        <div class="user-info">
+                            <a href="#" class="name">Mack Mic</a>
+                            <a href="#">15 July, 2021 at 22:04 pm</a>
+                            <small title="Public"><i class="fas fa-globe-asia"></i></small>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-desc">
+                            <p class="post-text">I feel the presence of the Almighty, who formed us in his own image, and the breath. </p>
+                        </div>
+                        <div class="post-img">
+                            <img src="./images/post-3.jpg" alt="Post Image">
+                        </div>
+                        <div class="like-comment-count">
+                            <div class="all-reacts">
+                                <div><a href="#"><i class="fas fa-thumbs-up"></i></a></div>
+                                <div><a href="#"><i class="fas fa-heart"></i></a></div>
+                                <div><a href="#"><i class="fas fa-sad-tear"></i></a></div>
+                                <p>John Doe and 5 others</p>
+                            </div>
+                            <div class="comment-count">
+                                <p>5 Comments</p>
+                            </div>
+                        </div>
+                        <div class="like-comment-share">
+                            <div><a href="#"><i class="far fa-thumbs-up imp-icon"></i>Like</a></div>
+                            <div><a href="#"><i class="far fa-comment imp-icon"></i>Comment</a></div>
+                            <div><a href="#"><i class="fas fa-share imp-icon"></i>Share</a></div>
+                        </div>
+                        <!--comment area-->
+                        <div class="comment-box">
+                            <div class="comment-count">
+                                <a href="#">View 3 more comment</a>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-3.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Alex Smith</a>
+                                        <p class="comment">Hello, this is me.</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">1 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-4.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Helena</a>
+                                        <p class="comment">Hi there</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">35 m</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-comment-box">
+                                <div class="online">
+                                    <img src="./images/user-profie.jpg" alt="User Profile">
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Write a Comment...">
+                                    <div class="input-rel">
+                                        <a href="#"><i class="far fa-smile"></i></a>
+                                        <a href="#"><i class="fas fa-camera"></i></a>
+                                        <a href="#"><i class="far fa-images"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-box">
+                    <div><i class="fas fa-ellipsis-h"></i></div>
+                    <div class="post-user-profile">
+                        <img src="./images/chat-4.jpg" alt="User Img">
+                        <div class="user-info">
+                            <a href="#" class="name">Sonia Ahmed</a>
+                            <a href="#">14 July, 2021 at 10:50 am</a>
+                            <small title="Friends"><i class="fas fa-user-friends"></i></small>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-desc">
+                            <p class="post-text">I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies.</p>
+                        </div>
+                        <div class="post-img">
+                            <img src="./images/post-4.jpg" alt="Post Image">
+                        </div>
+                        <div class="like-comment-count">
+                            <div class="all-reacts">
+                                <div><a href="#"><i class="fas fa-thumbs-up"></i></a></div>
+                                <div><a href="#"><i class="fas fa-heart"></i></a></div>
+                                <div><a href="#"><i class="fas fa-sad-tear"></i></a></div>
+                                <p>John Doe and 5 others</p>
+                            </div>
+                            <div class="comment-count">
+                                <p>5 Comments</p>
+                            </div>
+                        </div>
+                        <div class="like-comment-share">
+                            <div><a href="#"><i class="far fa-thumbs-up imp-icon"></i>Like</a></div>
+                            <div><a href="#"><i class="far fa-comment imp-icon"></i>Comment</a></div>
+                            <div><a href="#"><i class="fas fa-share imp-icon"></i>Share</a></div>
+                        </div>
+                        <!--comment area-->
+                        <div class="comment-box">
+                            <div class="comment-count">
+                                <a href="#">View 3 more comment</a>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-1.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Alex Smith</a>
+                                        <p class="comment">Hello, this is me.</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">1 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-2.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Helena</a>
+                                        <p class="comment">Hi there</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">35 m</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-comment-box">
+                                <div class="online">
+                                    <img src="./images/user-profie.jpg" alt="User Profile">
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Write a Comment...">
+                                    <div class="input-rel">
+                                        <a href="#"><i class="far fa-smile"></i></a>
+                                        <a href="#"><i class="fas fa-camera"></i></a>
+                                        <a href="#"><i class="far fa-images"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-box">
+                    <div><i class="fas fa-ellipsis-h"></i></div>
+                    <div class="post-user-profile">
+                        <img src="./images/chat-5.jpg" alt="User Img">
+                        <div class="user-info">
+                            <a href="#" class="name">Newaz</a>
+                            <a href="#">28 July, 2021 at 13:10 pm</a>
+                            <small title="Public"><i class="fas fa-globe-asia"></i></small>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-desc">
+                            <p class="post-text">I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants.</p>
+                        </div>
+                        <div class="post-img">
+                            <img src="./images/post-5.jpg" alt="Post Image">
+                        </div>
+                        <div class="like-comment-count">
+                            <div class="all-reacts">
+                                <div><a href="#"><i class="fas fa-thumbs-up"></i></a></div>
+                                <div><a href="#"><i class="fas fa-heart"></i></a></div>
+                                <div><a href="#"><i class="fas fa-sad-tear"></i></a></div>
+                                <p>John Doe and 5 others</p>
+                            </div>
+                            <div class="comment-count">
+                                <p>5 Comments</p>
+                            </div>
+                        </div>
+                        <div class="like-comment-share">
+                            <div><a href="#"><i class="far fa-thumbs-up imp-icon"></i>Like</a></div>
+                            <div><a href="#"><i class="far fa-comment imp-icon"></i>Comment</a></div>
+                            <div><a href="#"><i class="fas fa-share imp-icon"></i>Share</a></div>
+                        </div>
+                        <!--comment area-->
+                        <div class="comment-box">
+                            <div class="comment-count">
+                                <a href="#">View 3 more comment</a>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-3.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Alex Smith</a>
+                                        <p class="comment">Hello, this is me.</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">1 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-comment-box">
+                                <a href="#"><img src="./images/chat-4.jpg" alt="Comment User"></a>
+                                <div class="user-comment">
+                                    <div class="user-comment-wrap">
+                                        <a href="#" class="user">Helena</a>
+                                        <p class="comment">Hi there</p>
+                                    </div>
+                                    <div class="comment-rel">
+                                        <a href="#" class="like">Like</a>
+                                        <a href="#" class="reply">Reply</a>
+                                        <span class="time">35 m</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-comment-box">
+                                <div class="online">
+                                    <img src="./images/user-profie.jpg" alt="User Profile">
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Write a Comment...">
+                                    <div class="input-rel">
+                                        <a href="#"><i class="far fa-smile"></i></a>
+                                        <a href="#"><i class="fas fa-camera"></i></a>
+                                        <a href="#"><i class="far fa-images"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-btn">
+                <a href="#" class="btn">Load More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------Profile page End------------>
+
+
+
+<!--font-awesome js-->
+<script src="./js/all.js"></script>
+<!--custom js-->
+<script src="./js/custom.js"></script>
+</body>
+</html>

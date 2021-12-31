@@ -1,0 +1,35 @@
+/*Lato Font*/
+@font-face {
+    font-family: Lato;
+    src: url('../../fonts/Lato/Lato-Regular.ttf');
+}
+/*Pacifico Font*/
+@font-face {
+    font-family: Pacifico;
+    src: url('../../fonts/Pacifico/Pacifico-Regular.ttf');
+}
+/*Poppins Font*/
+@font-face {
+    font-family: Poppins;
+    src: url('../../fonts/Poppins/Poppins-Regular.ttf');
+}
+/*Righteous Font*/
+@font-face {
+    font-family: Righteous;
+    src: url('../../fonts/Righteous/Righteous-Regular.ttf');
+}
+/*Roboto Font*/
+@font-face {
+    font-family: Roboto;
+    src: url('../../fonts/Roboto/Roboto-Regular.ttf');
+}
+/*Roboto Condensed Font*/
+@font-face {
+    font-family: RobotoCondensed;
+    src: url('../../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf');
+}
+/*Ubuntu Font*/
+@font-face {
+    font-family: Ubuntu;
+    src: url('../../fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
